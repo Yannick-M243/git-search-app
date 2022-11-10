@@ -9,6 +9,7 @@ const cors = require('cors');
 app.use(bodyParser.json());
 app.use(helmet());
 
+//setting header parameters
 app.use(function (req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
@@ -17,6 +18,7 @@ app.use(function (req, res, next) {
     next();
 });
 
+//linking the /api parameter to its route file
 app.use('/api', api);
 app.get('/', function (req, res) {
     res.send('Server is running');
