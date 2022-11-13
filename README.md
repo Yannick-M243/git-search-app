@@ -23,7 +23,7 @@ This project was built using:
 
 -   Clone the repo
     ```sh
-    git clone https://github.com/Yannick-M243/git-search-app.git
+    git clone --recurse-submodules -j8 https://github.com/Yannick-M243/git-search-app.git
     ```
 -   Switch to the repo folder
     ```sh
